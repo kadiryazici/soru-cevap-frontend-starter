@@ -10,6 +10,7 @@ export default defineConfig({
     Vue(),
     Icons({
       compiler: 'vue3',
+      defaultClass: 'unplugin-icon',
     }),
   ],
   resolve: {

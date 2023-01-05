@@ -9,3 +9,12 @@ export function sanitizeTypeAreaInput(input: string) {
     .map(line => line.replace(/\s\s+/g, ' '))
     .join('\n')
 }
+
+export function logOut() {
+  document.cookie = ''
+
+  for (const key of Object.keys(localStorage))
+    localStorage.removeItem(key)
+
+  window.location.assign(window.location.origin)
+}

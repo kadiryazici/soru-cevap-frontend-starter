@@ -5,13 +5,23 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: () => import('../views/Home.vue'),
     },
     {
       path: '/question/:questionId',
       name: 'Question',
       component: () => import('../views/QuestionView.vue'),
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: () => import('../views/Login.vue'),
+    },
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: () => import('../views/Signup.vue'),
     },
   ],
   scrollBehavior(_to, _from, position) {
