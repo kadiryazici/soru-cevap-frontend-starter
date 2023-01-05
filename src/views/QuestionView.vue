@@ -1,8 +1,30 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { Vote } from '@/common'
 import Answer from '@/components/Answer.vue'
+import Button from '@/components/Button.vue'
 import Question from '@/components/Question.vue'
 import Separator from '@/components/Separator.vue'
+import TypeArea from '@/components/TypeArea.vue'
+import { sanitizeTypeAreaInput } from '@/utils'
+
+const answerInput = ref('')
+
+function handleAnswerSend(e: MouseEvent | KeyboardEvent) {
+  if (e instanceof KeyboardEvent) {
+    // If user presses enter repeatedly we do nothing
+    // If user pressed CMD+Enter or CTRL+Enter we prevent default or do nothing.
+    if (e.repeat || (e.ctrlKey === false && e.metaKey === false))
+      return
+
+    e.preventDefault()
+  }
+
+  const sanitized = sanitizeTypeAreaInput(answerInput.value)
+  answerInput.value = sanitized
+
+  console.log('Answer: ', sanitized)
+}
 </script>
 
 <template>
@@ -46,4 +68,22 @@ import Separator from '@/components/Separator.vue'
     :vote-count="0"
     :vote="Vote.Upvote"
   />
+
+  <Separator
+    text="Add Answer"
+    :space-y="30"
+  />
+
+  <TypeArea
+    v-model.trim="answerInput"
+    placeholder="type here your answer"
+    @keydown.enter="handleAnswerSend"
+  />
+
+  <Button
+    style="margin-top: 30px"
+    @click="handleAnswerSend"
+  >
+    Send
+  </Button>
 </template>

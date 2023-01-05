@@ -11,6 +11,7 @@ specifiers:
   npm-run-all: ^4.1.5
   pinia: ^2.0.28
   sass: ^1.57.1
+  trim-lines: ^3.0.1
   typescript: ~4.7.4
   unplugin-icons: ^0.15.0
   vite: ^4.0.0
@@ -21,6 +22,7 @@ specifiers:
 dependencies:
   dayjs: 1.11.7
   pinia: 2.0.28_e7lp6ggkpgyi5vqd44m2kxvk6i
+  trim-lines: 3.0.1
   vue: 3.2.45
   vue-router: 4.1.6_vue@3.2.45
 
@@ -2881,6 +2883,10 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /trim-lines/3.0.1:
+    resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
+    dev: false
 
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}

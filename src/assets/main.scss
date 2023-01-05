@@ -6,7 +6,10 @@
 
 html {
   height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body, *::placeholder, textarea, input {
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 body {
