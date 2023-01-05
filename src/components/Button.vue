@@ -16,7 +16,10 @@ const textColor = computed(() => colorToCssVar(props.color))
 </script>
 
 <template>
-  <button :class="{ disabled }">
+  <button
+    :disabled="props.disabled || undefined"
+    :class="{ disabled }"
+  >
     <slot />
   </button>
 </template>
