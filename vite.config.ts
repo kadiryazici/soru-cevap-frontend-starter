@@ -6,6 +6,7 @@ import Vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/soru-cevap-frontend-starter/',
   plugins: [
     Vue(),
     Icons({
