@@ -1,0 +1,23 @@
+@use './reset.scss';
+@use './colors.scss';
+@use './vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+html {
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  width: 100%;
+  background-color: var(--bg-1);
+}
+
+#app {
+  min-height: 0;
+  width: 100%;
+  padding-left: var(--sidebar-width);
+}
