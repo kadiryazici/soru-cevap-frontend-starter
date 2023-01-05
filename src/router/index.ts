@@ -14,6 +14,12 @@ const router = createRouter({
       component: () => import('../views/QuestionView.vue'),
     },
   ],
+  scrollBehavior(_to, _from, position) {
+    if (position)
+      return position
+
+    return { left: 0, top: 0 }
+  },
 })
 
 export default router

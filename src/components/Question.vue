@@ -3,6 +3,7 @@ import dayjs from 'dayjs'
 import TagIcon from 'virtual:icons/carbon/tag'
 import UserIcon from 'virtual:icons/carbon/user'
 import TimeIcon from 'virtual:icons/carbon/time'
+import { RouterLink } from 'vue-router'
 import Details from './Details.vue'
 import Detail from './Detail.vue'
 import type { ResponseUser } from '@/types'
@@ -21,12 +22,12 @@ const props = defineProps<Props>()
 
 <template>
   <div class="question">
-    <a
-      href="#"
+    <RouterLink
+      to="/question/123"
       class="question-title"
     >
       {{ props.title }}
-    </a>
+    </RouterLink>
 
     <div class="question-body">
       {{ props.body }}
