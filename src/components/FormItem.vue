@@ -15,7 +15,10 @@ const props = defineProps<Props>()
 
     <slot />
 
-    <div class="form-item-error">
+    <div
+      v-if="props.errorText != null"
+      class="form-item-error"
+    >
       {{ props.errorText }}
     </div>
   </div>

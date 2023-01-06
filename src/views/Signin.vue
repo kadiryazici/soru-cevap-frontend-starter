@@ -4,8 +4,8 @@ import Sign from '@/components/Sign.vue'
 
 <template>
   <Sign
-    :link-to="{ name: 'Signin' }"
-    link-text="Have an account? Log in"
-    title="Sign Up"
+    :link-to="{ name: 'Signup' }"
+    link-text="No account? Sign up"
+    title="Sign In"
   />
 </template>

@@ -22,5 +22,8 @@ body {
 #app {
   min-height: 0;
   width: 100%;
+}
+
+[data-with-sidebar] #app {
   padding-left: var(--sidebar-width);
 }

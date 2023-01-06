@@ -7,21 +7,33 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       component: () => import('../views/Home.vue'),
+      meta: {
+        withSidebar: true,
+      },
     },
     {
       path: '/question/:questionId',
       name: 'Question',
       component: () => import('../views/QuestionView.vue'),
+      meta: {
+        withSidebar: true,
+      },
     },
     {
-      path: '/login',
-      name: 'Login',
-      component: () => import('../views/Login.vue'),
+      path: '/signin',
+      name: 'Signin',
+      component: () => import('../views/Signin.vue'),
+      meta: {
+        flexPage: true,
+      },
     },
     {
       path: '/signup',
       name: 'Signup',
       component: () => import('../views/Signup.vue'),
+      meta: {
+        flexPage: true,
+      },
     },
   ],
   scrollBehavior(_to, _from, position) {
